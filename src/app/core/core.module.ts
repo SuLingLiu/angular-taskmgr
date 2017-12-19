@@ -1,7 +1,7 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { MdToolbarModule, MdIconModule, MdButtonModule } from '@angular/material';
+import { SharedModule } from '../shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -11,11 +11,9 @@ import { loadSvgResources } from '../utils/svg.util';
 
 @NgModule({
   imports: [
-    CommonModule,
     HttpModule,
-    MdToolbarModule,
-    MdIconModule,
-    MdButtonModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
   //如果不导出去只能在这个模块里用
